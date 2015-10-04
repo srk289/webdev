@@ -1,0 +1,39 @@
+*{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+body{
+	color: #333;
+	font-family: "open sans",helvetica,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	word-wrap: break-word;
+	font-weight: 300;
+}
+
+.container{
+	width: 100%;
+}
+
+nav{
+	width: 28%;
+	position: fixed;
+	height: 100%;
+	background: #45516a;
+	padding: 30px 5px;
+}
+
+#content{
+	width: 72%;
+	float: right;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1025px){
+	nav{
+		width: 26%;
+	}
+	#content{
+		width: 74%;
+	}
+}

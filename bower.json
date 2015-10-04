@@ -1,0 +1,19 @@
+{
+  "name": "Web-development-course",
+  "version": "0.0.1",
+  "authors": [
+    "Srikanth Kondaparthy <srk289@gmail.com>"
+  ],
+  "description": "Web development course",
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery":"^2.1.*",
+    "normalize.css": "*",  
+    "font-awesome": "*"
+  }
+}

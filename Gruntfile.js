@@ -1,0 +1,85 @@
+module.exports = function(grunt) {
+
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    connect: {
+      uses_defaults: {}
+    },
+    less: {
+      options: {
+        paths: 'assets/',
+        yuicompress: false,
+        ieCompat: true,
+        require: [
+            'css/main.less'
+        ]
+      },
+      src: {
+          expand: true,
+          cwd: 'assets/',
+          src: [
+              'css/*.less'
+          ],
+          ext: '.css',
+          dest: 'assets/'
+      }
+    },
+    copy: {
+      main: {
+        files: [
+            // includes files within path
+            {
+              expand: true, 
+              cwd: 'bower_components/font-awesome/css/', 
+              src: 'font-awesome.min.css',
+              dest: 'assets/css/', 
+              ilter: 'isFile'
+            },
+            {
+              expand: true, 
+              cwd: 'bower_components/font-awesome/fonts/', 
+              src: '**/*',
+              dest: 'assets/fonts/'
+            },
+            {
+              expand: true, 
+              cwd: 'bower_components/normalize.css/', 
+              src: 'normalize.css',
+              dest: 'assets/css/', 
+              filter: 'isFile'
+            },
+            {
+              expand: true,
+              cwd: 'bower_components/jquery/dist/',
+              src: 'jquery.min.js',
+              dest: 'assets/js/vendor/'
+            }
+          ]
+        }
+    },
+    watch: {
+      css: {
+          files: ['assets/css/*.less', 'assets/css/**/*.less'],
+          tasks: 'less',
+          options: {
+            livereload: true,
+          }
+        },
+      js: {
+        files: ['assets/js/*.js', 'assets/js/**/*.js'],
+        options: {
+          livereload: true
+        }
+      }
+    }
+    
+  });
+
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  
+  grunt.registerTask('default', ['connect','copy','less','watch']);
+
+};
