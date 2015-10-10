@@ -1,6 +1,7 @@
 (function($){
-	var menu   = $('#menu'),
-		header = $('#header');
+	var menu   	= $('#menu'),
+		header 	= $('#header'),
+		summary = $('#summary');
 		
 	
 	function init(){
@@ -10,7 +11,8 @@
 	function loadHTML(){
 		menu.load('/app/views/menu.html', menuloaded);
 		header.load('/app/views/header.html');
-	}
+		summary.load('/app/views/summary.html');
+	}	
 
 	function menuloaded(){
 		var hamburger    = $('.hamburger'),
