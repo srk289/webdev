@@ -9,7 +9,7 @@
 
 	function loadHTML(){
 		menu.load('/app/views/menu.html', menuloaded);
-		//header.load('/app/views/header.html');
+		header.load('/app/views/header.html');
 	}
 
 	function menuloaded(){
