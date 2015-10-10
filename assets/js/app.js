@@ -9,9 +9,9 @@
 	}
 
 	function loadHTML(){
-		menu.load('/app/views/menu.html', menuloaded);
 		header.load('/app/views/header.html');
-		summary.load('/app/views/summary.html');
+		//summary.load('/app/views/summary.html');
+		menu.load('/app/views/menu.html', menuloaded);
 	}	
 
 	function menuloaded(){
@@ -33,10 +33,11 @@
 		function internalLinks(){
 			if(navLinks.length){
 				navLinks.on('click touch', function(e){
-					//e.preventDefault();
+					e.preventDefault();
 					var linkto = this.getAttribute('data-href');
 					console.log('linkto', linkto);
-
+					var dest = $('#'+linkto).offset().top;
+					$('html,body').animate({scrollTop: dest}, 1000,'swing');
 				})
 			}
 		}

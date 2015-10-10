@@ -71,13 +71,18 @@ module.exports = function(grunt) {
                 livereload: true
               }
             },
-        html: {
+        views: {
                 files: ['app/views/*.html', 'app/views/**/*.html'],
                 options: {
                   livereload: true
                 }
-              }
-    
+              },
+        index: {
+            files: ['index.html'],
+            options: {
+              livereload: true
+            }
+        }
     }
   });
 
