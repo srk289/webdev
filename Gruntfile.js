@@ -58,21 +58,27 @@ module.exports = function(grunt) {
         }
     },
     watch: {
-      css: {
-          files: ['assets/css/*.less', 'assets/css/**/*.less'],
-          tasks: 'less',
-          options: {
-            livereload: true,
-          }
-        },
-      js: {
-        files: ['assets/js/*.js', 'assets/js/**/*.js'],
-        options: {
-          livereload: true
-        }
-      }
-    }
+        css: {
+                files: ['assets/css/*.less', 'assets/css/**/*.less'],
+                tasks: 'less',
+                options: {
+                  livereload: true,
+                }
+            },
+        js: {
+              files: ['assets/js/*.js', 'assets/js/**/*.js'],
+              options: {
+                livereload: true
+              }
+            },
+        html: {
+                files: ['app/views/*.html', 'app/views/**/*.html'],
+                options: {
+                  livereload: true
+                }
+              }
     
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
