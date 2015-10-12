@@ -2,9 +2,7 @@
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
-html{
-	scroll-behavior: smooth;
-}
+
 body{
 	color: #333;
 	font-family: "open sans",helvetica,sans-serif;
@@ -25,6 +23,11 @@ body{
 
 section{
 	min-height: 300px;
+	float: left;
+	width: 100%;
+	&:nth-child(2n){
+		background: #eee;
+	}
 	h1{
 		float: right;
 	}

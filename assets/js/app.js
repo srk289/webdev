@@ -6,11 +6,25 @@
 	
 	function init(){
 		loadHTML();
+		loadwow();
+	}
+	
+	function loadwow(){
+		wow = new WOW(
+		  {
+		    animateClass: 'animated',
+		    offset:       100,
+		    callback:     function(box) {
+		      console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+		    }
+		  }
+		);
+		wow.init();
 	}
 
 	function loadHTML(){
 		header.load('/app/views/header.html');
-		//summary.load('/app/views/summary.html');
+		summary.load('/app/views/summary.html');
 		menu.load('/app/views/menu.html', menuloaded);
 	}	
 

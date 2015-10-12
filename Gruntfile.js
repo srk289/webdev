@@ -53,6 +53,18 @@ module.exports = function(grunt) {
               cwd: 'bower_components/jquery/dist/',
               src: 'jquery.min.js',
               dest: 'assets/js/vendor/'
+            },
+            {
+              expand: true,
+              cwd: 'bower_components/wowjs/css/libs/',
+              src: 'animate.css',
+              dest: 'assets/css/'
+            },
+            {
+              expand: true,
+              cwd: 'bower_components/wowjs/dist/',
+              src: 'wow.min.js',
+              dest: 'assets/js/vendor/'
             }
           ]
         }

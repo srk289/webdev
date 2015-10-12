@@ -14,6 +14,7 @@
   "dependencies": {
     "jquery":"^2.1.*",
     "normalize.css": "*",  
-    "font-awesome": "*"
+    "font-awesome": "*",
+    "wowjs": "1.1.2"
   }
 }
