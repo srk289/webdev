@@ -1,8 +1,8 @@
 (function($){
 	var menu   	= $('#menu'),
 		header 	= $('#header'),
-		summary = $('#summary');
-		
+		summary = $('#summary'),
+		experience = $('#experience');
 	
 	function init(){
 		loadHTML();
@@ -25,6 +25,7 @@
 	function loadHTML(){
 		header.load('/app/views/header.html');
 		summary.load('/app/views/summary.html');
+		experience.load('/app/views/experience.html');
 		menu.load('/app/views/menu.html', menuloaded);
 	}	
 
