@@ -30,19 +30,6 @@ module.exports = function(grunt) {
             // includes files within path
             {
               expand: true, 
-              cwd: 'bower_components/font-awesome/css/', 
-              src: 'font-awesome.min.css',
-              dest: 'assets/css/', 
-              ilter: 'isFile'
-            },
-            {
-              expand: true, 
-              cwd: 'bower_components/font-awesome/fonts/', 
-              src: '**/*',
-              dest: 'assets/fonts/'
-            },
-            {
-              expand: true, 
               cwd: 'bower_components/normalize.css/', 
               src: 'normalize.css',
               dest: 'assets/css/', 
@@ -56,15 +43,16 @@ module.exports = function(grunt) {
             },
             {
               expand: true,
-              cwd: 'bower_components/wowjs/css/libs/',
-              src: 'animate.css',
-              dest: 'assets/css/'
+              cwd: 'bower_components/jquery-ui/',
+              src: 'jquery-ui.min.js',
+              dest: 'assets/js/vendor/'
             },
             {
-              expand: true,
-              cwd: 'bower_components/wowjs/dist/',
-              src: 'wow.min.js',
-              dest: 'assets/js/vendor/'
+              expand: true, 
+              cwd: 'bower_components/jquery-ui/themes/base/', 
+              src: 'resizable.css',
+              dest: 'assets/css/', 
+              filter: 'isFile'
             }
           ]
         }

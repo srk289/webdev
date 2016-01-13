@@ -1,7 +1,7 @@
 {
-  "name": "Web-development-course",
+  "name": "Ambercite",
   "version": "1.0.0",
-  "description": "Web development course details",
+  "description": "Ambercite layout test",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
