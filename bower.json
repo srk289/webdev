@@ -1,10 +1,10 @@
 {
-  "name": "Web-development-course",
+  "name": "Ambercite",
   "version": "0.0.1",
   "authors": [
     "Srikanth Kondaparthy <srk289@gmail.com>"
   ],
-  "description": "Web development course",
+  "description": "Ambercite",
   "main": "index.html",
   "ignore": [
     "**/.*",
@@ -13,7 +13,7 @@
   ],
   "dependencies": {
     "jquery":"^2.1.*",
-    "normalize.css": "*",  
-    "font-awesome": "*"
+    "normalize.css": "*",
+    "jquery-ui": "*"
   }
 }

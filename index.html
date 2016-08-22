@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Web development course</title>
-    <!-- INCLUDE REQUIRED THIRD PARTY LIBRARY JAVASCRIPT AND CSS -->
+    <title>Ambercite</title>
     <link rel="stylesheet" href="/assets/css/main.css">
     <meta content="width=device-width,initial-scale=1.0,user-scalable=yes,minimum-scale=1.0,maximum-scale=3.0" id="viewport" name="viewport">
 </head>
 <body>
 	<div class="container">
-		<nav id="menu">
+		<nav class="left">
+			<ul class="menu">
+				<li class="active"><a href="#">Tab One</a></li>
+				<li><a href="#">Tab 2=ab Two swai test 2</a></li>
+				<li><a href="#">Tab Three</a></li>
+			</ul>
 		</nav>
-		<div id="content">
-			<section id="header"></section>
-			<section id="summary"></section>
-			<section id="experience"></section>
-			<section id="motto"></section>
-			<section id="skills"></section>
-			<section id="education"></section>
+		<div id="content" class="ui-widget-content">
+			<section class="middle resizableH">
+				<div class="middleContainer">
+					<div class="middleTop resizableV">
+						<h1>Tab 1</h1>
+					</div>
+					<div class="middleBottom">
+					</div>
+				</div>
+			</section>
+			<section class="right">
+				<h2 class="ratio"></h2>
+			</section> 
 		</div>
 	</div>
 </body>
 <!-- INCLUDE APPLICATION SPECIFIC JAVASCRIPT -->
 <script type="text/javascript" src="assets/js/vendor/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/vendor/jquery-ui.min.js"></script>
 <script type="text/javascript" src="assets/js/app.js"></script>
 <script src="http://localhost:35729/livereload.js"></script>
 </html>
